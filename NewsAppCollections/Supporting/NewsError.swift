@@ -8,4 +8,5 @@ public enum NewsError: Error {
     case badURLtoImage
     case invalidDataImage
     case errorParsing
+    case errorDownloadImage
 }

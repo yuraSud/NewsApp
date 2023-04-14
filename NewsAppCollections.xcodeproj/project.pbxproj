@@ -18,6 +18,7 @@
 		43D94FA229E7269400B16F46 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D94FA129E7269400B16F46 /* Model.swift */; };
 		43D94FA529E72ED000B16F46 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D94FA429E72ED000B16F46 /* NetworkManager.swift */; };
 		43D94FA729E744F300B16F46 /* Date + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D94FA629E744F300B16F46 /* Date + Extensions.swift */; };
+		43E5E3F829E80AC90087FBFD /* DetailNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E5E3F729E80AC90087FBFD /* DetailNewsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		43D94FA129E7269400B16F46 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		43D94FA429E72ED000B16F46 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		43D94FA629E744F300B16F46 /* Date + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date + Extensions.swift"; sourceTree = "<group>"; };
+		43E5E3F729E80AC90087FBFD /* DetailNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailNewsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				43D94F8429E7184700B16F46 /* NewsViewController.swift */,
+				43E5E3F729E80AC90087FBFD /* DetailNewsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 			files = (
 				43D94FA229E7269400B16F46 /* Model.swift in Sources */,
 				43D94FA729E744F300B16F46 /* Date + Extensions.swift in Sources */,
+				43E5E3F829E80AC90087FBFD /* DetailNewsViewController.swift in Sources */,
 				43D94F8529E7184700B16F46 /* NewsViewController.swift in Sources */,
 				43D94FA029E7200100B16F46 /* NewsError.swift in Sources */,
 				43D94F8129E7184700B16F46 /* AppDelegate.swift in Sources */,

@@ -27,7 +27,7 @@ class NewsCollectionsView: UICollectionView {
     }
     
     private func setupViews(){
-        backgroundColor = .gray
+        backgroundColor = .clear
         translatesAutoresizingMaskIntoConstraints = false
         newsLayout.minimumLineSpacing = 15
         newsLayout.minimumInteritemSpacing = 5
@@ -35,7 +35,6 @@ class NewsCollectionsView: UICollectionView {
     }
     
     private func setDelegates(){
-        delegate = self
         dataSource = self
     }
 }
@@ -54,31 +53,9 @@ extension NewsCollectionsView: UICollectionViewDataSource {
         }
         if let newsYu = newsYUra {
             let article = newsYu.articles[indexPath.row]
-            //print(article.publishedAt, "index row = \(indexPath.row)", article.source.name, article.author ?? "niiil")
-            
             cell.news = NewsForCell(article: article)
         }
         return cell
     }
 }
 
-//MARK: - Delegate
-
-extension NewsCollectionsView: UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-        guard let cell = cellForItem(at: indexPath) as? NewsCell else {return}
-        let news = cell.news?.article
-        
-        print(news?.publishedAt ?? "nil date", news?.author ?? "nil author")
-               
-    }
-}
-
-//MARK: - DelegateFloWLayout
-
-extension NewsCollectionsView: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width - 20, height: collectionView.frame.width * 9 / 16)
-    }
-}

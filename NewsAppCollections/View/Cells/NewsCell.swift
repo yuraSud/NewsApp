@@ -1,9 +1,3 @@
-//
-//  NewsCell.swift
-//  NewsAppCollections
-//
-//  Created by YURA																			 on 12.04.2023.
-//
 
 import UIKit
 
@@ -16,19 +10,20 @@ class NewsCell: UICollectionViewCell {
             }
         }
     }
+    
     let fetchManager = NetworkManagers.shared
     let titleLabel = UILabel()
     let datePublishedLabel = UILabel()
     let authorLabel = UILabel()
     let imageViewNews = UIImageView()
     var stack = UIStackView()
+    var image = UIImage()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureStack()
         setupViews()
         setConstraints()
-        
     }
     
     required init?(coder: NSCoder) {
@@ -36,7 +31,7 @@ class NewsCell: UICollectionViewCell {
     }
     
     private func setupViews(){
-        backgroundColor = .white
+        backgroundColor = .quaternaryLabel
         addSubview(titleLabel)
         addSubview(imageViewNews)
         layer.cornerRadius = 20
@@ -58,11 +53,9 @@ class NewsCell: UICollectionViewCell {
     
     
     private func configureCell(){
-        let date = news?.article.publishedAt
-        
         titleLabel.text = "\(news?.article.source.name ?? " ") ,  \(news?.article.title ?? " ")"
         authorLabel.text = news?.article.author ?? " "
-        datePublishedLabel.text = date ?? " "
+        datePublishedLabel.text = news?.article.publishedAt ?? " "
         
         guard let imageURL = news?.article.urlToImage else {
             DispatchQueue.main.async {
@@ -74,9 +67,11 @@ class NewsCell: UICollectionViewCell {
             case .success(let img):
                 DispatchQueue.main.async {
                     self.imageViewNews.image = img
+                    self.image = img
                 }
             case .failure(_):
-                print("err")
+                print(NewsError.errorDownloadImage)
+                
             }
         }
     }

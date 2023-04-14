@@ -1,12 +1,6 @@
 
 import Foundation
 
-struct NewsModel {
-    var title: String
-}
-
-//   let newsYUra = try? JSONDecoder().decode(NewsYUra.self, from: jsonData)
-
 // MARK: - NewsYUra
 struct NewsYUra: Codable {
     let status: String
