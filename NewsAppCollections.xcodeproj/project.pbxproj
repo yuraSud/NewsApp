@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		434A863E29F04B0400D44C03 /* StarterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434A863D29F04B0400D44C03 /* StarterViewController.swift */; };
 		43D94F8129E7184700B16F46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D94F8029E7184700B16F46 /* AppDelegate.swift */; };
 		43D94F8329E7184700B16F46 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D94F8229E7184700B16F46 /* SceneDelegate.swift */; };
 		43D94F8529E7184700B16F46 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D94F8429E7184700B16F46 /* NewsViewController.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		434A863D29F04B0400D44C03 /* StarterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarterViewController.swift; sourceTree = "<group>"; };
 		43D94F7D29E7184700B16F46 /* NewsAppCollections.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsAppCollections.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43D94F8029E7184700B16F46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43D94F8229E7184700B16F46 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				43D94F8429E7184700B16F46 /* NewsViewController.swift */,
+				434A863D29F04B0400D44C03 /* StarterViewController.swift */,
 				43E5E3F729E80AC90087FBFD /* DetailNewsViewController.swift */,
 			);
 			path = Controllers;
@@ -220,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				43D94FA229E7269400B16F46 /* Model.swift in Sources */,
+				434A863E29F04B0400D44C03 /* StarterViewController.swift in Sources */,
 				43D94FA729E744F300B16F46 /* Date + Extensions.swift in Sources */,
 				43E5E3F829E80AC90087FBFD /* DetailNewsViewController.swift in Sources */,
 				43D94F8529E7184700B16F46 /* NewsViewController.swift in Sources */,

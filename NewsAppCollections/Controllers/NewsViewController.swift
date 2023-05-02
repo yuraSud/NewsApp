@@ -7,13 +7,31 @@ class NewsViewController: UIViewController {
     private let fetchManager = NetworkManagers.shared
     private let searchController = UISearchController()
     private var timer: Timer?
+   
+    var completion: ((String)->())?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
         setConstraints()
-        fetchData()
+        //fetchData()
         configureSearchBar()
+//        let doneButton = UIBarButtonItem(title: "Exchenge", style: .plain , target: self, action: #selector(onDoneButtonTapped))
+       // let b = UIBarButtonItem(title: "exchange", image: UIImage(systemName: "chevron.backward"), target: self, action: #selector(onDoneButtonTapped))
+       //  self.navigationItem.leftBarButtonItems = [b]
+      //  navigationItem.leftBarButtonItem = .init(barButtonSystemItem: UIBarButtonItem.SystemItem.undo, target: self, action: #selector(onDoneButtonTapped))
+      
+    }
+
+@objc func onDoneButtonTapped() {
+    navigationController?.dismiss(animated: false)
+//    dismiss(animated: true) {
+//        self.completion?("Olya")
+//    }
+    
+}
+    deinit {
+        print("News deinit")
     }
     
     private func setupViews(){
